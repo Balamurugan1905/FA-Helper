@@ -1,0 +1,157 @@
+body{
+  background-image: linear-gradient(rgb(114, 221, 233),rgb(135, 160, 250));
+  background-repeat: no-repeat;
+  height: 600vh;
+}
+.logo img{
+  height: 80px;
+  width: 500px;
+}
+.logo{
+  text-align: center;
+} 
+.title img{
+  height: 250px;
+  width: 250px;
+}
+.title{
+  text-align: center;
+}      
+hr{
+	margin-bottom: 50px;
+	
+}     
+h2{
+	color: black;
+	margin-left: 450px;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+.name img{
+	height: 100px;
+	width: 100px;
+	margin-left: 30px;
+	margin-top: 50px;
+}
+h4{
+	font-size: 35px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+nav {
+	margin-left: 225px;
+	margin-bottom: 60px;
+	position: relative;
+	width: 600px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+	display: flex;
+	text-align: center;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
+}
+a:nth-child(4) {
+	width: 160px;
+}
+a:nth-child(5) {
+	width: 120px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #9b59b6;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #9b59b6;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #9b59b6;
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 160px;
+	left: 310px;
+	background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 120px;
+	left: 470px;
+	background-color: #9b59b6;
+}
+.dn{
+	font-size: 20px;
+	margin-top: 50px;
+}
+.details table{
+	height: 500px;
+	width: 750px;
+	margin-top: 50px;
+	margin: 50px;
+	margin-left: 150px;
+	color: black;
+	font-size: 18px;
+	background-color: white;
+	
+}
+table{
+	height: 400px;
+	width: 500px;
+	margin-top: 50px;
+	margin: 50px;
+	margin-left: 130px;
+	color: black;
+	font-size: 15px;
+}
+.mark table{
+	height: 500px;
+	width: 750px;
+	margin-top: 50px;
+	margin: 50px;
+	margin-left: 150px;
+	color: black;
+	font-size: 18px;
+	background-color: white;
+}
+.at table{
+	height: 500px;
+	width: 750px;
+	margin-top: 50px;
+	margin: 50px;
+	margin-left: 150px;
+	color: black;
+	font-size: 18px;
+	background-color: white;
+}
