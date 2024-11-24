@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Details Insertion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Fees Details Insertion</h1>
+        <form action="FeesInsert" method="post">
+            <label for="regno">Register Number</label>
+            <input type="text" id="regNo" name="registerNumber" required>
+
+            <h3>I Year</h3>
+            <label for="totalFeesI">Total Fees</label>
+            <input type="number" id="totalFeesI" name="totalFeesI" required>
+            <label for="scholarshipI">Scholarship/Others</label>
+            <input type="number" id="scholarshipI" name="scholarshipI">
+            <label for="examFeesI">Exam Fees</label>
+            <input type="number" id="examFeesI" name="examFeesI">
+            <label for="paidI">Paid</label>
+            <input type="number" id="paidI" name="paidI">
+
+            <h3>II Year</h3>
+            <label for="totalFeesII">Total Fees</label>
+            <input type="number" id="totalFeesII" name="totalFeesII" required>
+            <label for="scholarshipII">Scholarship/Others</label>
+            <input type="number" id="scholarshipII" name="scholarshipII">
+            <label for="examFeesII">Exam Fees</label>
+            <input type="number" id="examFeesII" name="examFeesII">
+            <label for="paidII">Paid</label>
+            <input type="number" id="paidII" name="paidII">
+
+            <h3>III Year</h3>
+            <label for="totalFeesIII">Total Fees</label>
+            <input type="number" id="totalFeesIII" name="totalFeesIII" required>
+            <label for="scholarshipIII">Scholarship/Others</label>
+            <input type="number" id="scholarshipIII" name="scholarshipIII">
+            <label for="examFeesIII">Exam Fees</label>
+            <input type="number" id="examFeesIII" name="examFeesIII">
+            <label for="paidIII">Paid</label>
+            <input type="number" id="paidIII" name="paidIII">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <title>Search page</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    transform: translate(8px, -166px);
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:123vh;
+    display: flex;
+    margin-top: -115px;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+body, html {
+  background-color:color-bg;
+}
+
+body, p, input, select, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: ruler;
+}
+
+.context {
+    margin: auto;
+    position:relative;
+    top: 200px;
+    width: 40%;
+  }
+  
+  #form {
+    width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    outline:none;
+    background: linear-gradient(to left top, #f0eeee, #f9f7fa) fixed;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.8);
+    transition: all 0.5s;
+  }
+  
+  #form:hover {
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  #form:focus {
+    border: 2px solid rgba(255,255,255,0.5);
+    background: linear-gradient(to left top, #000, #4e2d69) fixed;
+  }
+  
+  #button {
+    width: 150px;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight:bold;
+    outline:none;
+    background: linear-gradient(to left top, #000, #4e2d69) fixed;
+    border-radius: 25px;
+    border: 5px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.8);
+    transition: all 0.5s;
+    text-align: center;
+    margin-left: 140px;
+  }
+  
+  #button:hover {
+    border: 5px solid rgba(255,255,255,0.5);
+    background: linear-gradient(to left top, #000, #8b5db0) fixed;
+  }
+  
+  #button:focus {
+    background: linear-gradient(to left top, #8b5db0, #000) fixed;
+  }
+
+  .content {
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+  font-size: 30px;
+  background-color: black;
+  display: inline-block;
+  margin-left: 450px;
+  transform: translate(-18px, -30px);
+}  
+
+
+  #insert-link {
+    width: 150px;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight:bold;
+    outline:none;
+    background: linear-gradient(to left top, #000, #4e2d69) fixed;
+    border-radius: 25px;
+    border: 5px solid rgba(255,255,255,0.2);
+    color: white;
+    transition: all 0.5s;
+    text-align: center;
+    margin-left: 900px;
+  }
+  
+  #insert-link:hover {
+    border: 5px solid rgba(255,255,255,0.5);
+    background: linear-gradient(to left top, #000, #8b5db0) fixed;
+  }
+
+  #insert-link:focus {
+    background: linear-gradient(to left top, #8b5db0, #000) fixed;
+  }
+  
+  #insert-link a {
+  	  color : white;
+      text-decoration: none;
+  }
+img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    transform: translate(501px, 24px);
+}
+</style>
+</head>
+<body>
+
+
+<div class="area" >
+            <ul class="circles">
+                <div id="insert-link">
+                    <a href="insertindex1.html">Insert/Update Details</a>
+                </div>
+                <form action="Validation" method="post">
+                    <img src="logologo.jpg" alt="">
+                <div class="context">
+                    <h1>FA HELPER</h1>
+                    <input type="number" id="form" name="regbox" placeholder="Register Number">
+                  
+                  <button type="submit" id="button">Search</button>
+                </div>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </form>
+            </ul>
+
+
+    </div >
+
+</body>
+</html>
