@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logologo.jpg" type="image/x-icon">
+    <title>Insertion | Personal Details</title>
+    <style>
+        /* General Reset */
+        * {
+            text-align: center;
+        }
+
+        .input-box  {
+            margin-top: 100px;
+        }
+
+        .input-box input {
+            margin: 10px;
+            padding: 10px 50px;
+        }
+
+        .search-btn button{
+            margin-top: 20px;
+           padding: 5px;
+           border-radius: 10px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Updated to match personalindex.html */
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #ffffff, #ffe6f0);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-box {
+            margin-top: 25px;
+            text-align: center; /* Updated alignment */
+        }
+
+        .input-box label {
+            font-size: 1.1rem;
+            color: #444;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left; /* Ensure label text remains left-aligned */
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 0px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            display: block; /* Ensure input is centered below the label */
+            margin: 0 auto; /* Center the input box */
+        }
+
+        .input-box input:hover {
+            border-color: #4facfe;
+            box-shadow: 0 0 6px rgba(255, 126, 179, 0.5);
+        }
+
+        .input-box input:focus {
+            outline: none;
+            border-color: #00c6fb;
+            box-shadow: 0 0 10px rgba(255, 117, 140, 0.7);
+        }
+
+        .search-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-btn button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to right, #4facfe, #00c6fb);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .search-btn button:hover {
+            background: linear-gradient(to right, #00c6fb, #4facfe);
+            transform: translateY(-2px);
+        }
+
+        .search-btn button:active {
+            transform: scale(0.97);
+            background: #008cba;
+        }
+    </style>
+</head>
+<body>
+    <h1>PERSONAL DETAILS INSERTION/UPDATION</h1>
+    <form action="PersonalInsert" method="get">
+        <div class="input-box">
+            <label for="">Enter Register Number</label>
+            <input type="text" name="registerNumber">
+        </div>
+        <div class="search-btn">
+            <button type="submit">Insert/Update</button>    
+        </div>
+    </form>
+</body>
+</html>

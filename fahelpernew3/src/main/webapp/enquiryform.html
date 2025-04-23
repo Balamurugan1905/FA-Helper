@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="logologo.jpg" type="image/x-icon">
+    <title>Insertion | Enquiry Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .main {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+
+        .head h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .submit-btn input {
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn input:hover {
+            background-color: #0056b3;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <h2>ENQUIRY STATUS UPLOAD FORM</h2>
+        </div>
+       
+        <div class="form">
+            <form action="EnquiryInsert" method="post"> 
+                <label>Name</label>
+                <input type="text" name="name" required>
+                <label>Register Number</label>
+                <input type="text" name="registerNumber" required>
+                <label>Department</label>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Select a Department</option>
+                    <option value="bca">BCA</option>
+                    <option value="btech-cse">B.Tech in Computer Science and Engineering</option>
+                    <option value="btech-ece">B.Tech in Electronics and Communication Engineering</option>
+                    <option value="btech-mechanical">B.Tech in Mechanical Engineering</option>
+                    <option value="btech-civil">B.Tech in Civil Engineering</option>
+                    <option value="btech-eee">B.Tech in Electrical and Electronics Engineering</option>
+                    <option value="bsc-physics">B.Sc in Physics</option>
+                    <option value="bsc-chemistry">B.Sc in Chemistry</option>
+                    <option value="bsc-mathematics">B.Sc in Mathematics</option>
+                    <option value="bba">BBA</option>
+                    <option value="mba-marketing">MBA in Marketing</option>
+                    <option value="llb">BA LL.B</option>
+                    <option value="bed">B.Ed</option>
+                    <option value="bsc-agriculture">B.Sc in Agriculture</option>
+                    <option value="bdes-fashion">B.Des in Fashion Design</option>
+                </select>
+
+                <label>Year</label>
+                <select name="year" required>
+                    <option value="">Select</option>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                </select>
+                <label>Day Scholar/Hostel</label>
+                <select name="status" required>
+                    <option value="">Select</option>
+                    <option value="Day Scholar">Day Scholar</option>
+                    <option value="Hostel">Hostel</option>
+                </select>
+                <label>Date</label>
+                <input type="date" name="date" required>
+                <label for="reason">Reason</label>
+                <select name="reason" id="reason" required onchange="showOtherReasonInput(this)">
+                    <option value="">Select</option>
+                    <option value="rule_violations">Rule Violations</option>
+                    <option value="disruptive_behavior">Disruptive Behavior</option>
+                    <option value="bullying_harassment">Bullying or Harassment</option>
+                    <option value="property_damage">Property Damage</option>
+                    <option value="substance_use">Substance Use</option>
+                    <option value="conflict_fights">Conflict or Fights</option>
+                    <option value="absenteeism_truancy">Absenteeism or Truancy</option>
+                    <option value="inappropriate_use_technology">Inappropriate Use of Technology</option>
+                    <option value="breach_ethical_conduct">Breach of Ethical Conduct</option>
+                    <option value="complaint_resolution">Complaint Resolution</option>
+                    <option value="others">Others</option>
+                </select>
+                <!-- Hidden input for 'Others' -->
+                <div id="otherReasonDiv" class="hidden">
+                    <label>Specify Reason</label>
+                    <input type="text" name="otherReason" id="otherReason">
+                </div>
+                <div class="submit-btn">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showOtherReasonInput(selectElement) {
+            const otherReasonDiv = document.getElementById('otherReasonDiv');
+            const otherReasonInput = document.getElementById('otherReason');
+            
+            if (selectElement.value === 'others') {
+                otherReasonDiv.classList.remove('hidden');
+                otherReasonInput.required = true;
+            } else {
+                otherReasonDiv.classList.add('hidden');
+                otherReasonInput.required = false;
+                otherReasonInput.value = ''; // Clear input value
+            }
+        }
+    </script>
+</body>
+</html>
